@@ -1,1 +1,0 @@
-sudo apt-get -y install build-essential cmake swig libglu1-mesa-dev libreadline-dev libdevil-dev libxrandr-dev libfreetype6-dev joystick libopenal-dev libvorbis-dev libpng12-dev ncurses-dev libxi-dev libfreeimage-dev
