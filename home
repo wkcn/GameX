@@ -1,0 +1,1 @@
+g++ Defines.cpp GameX.cpp GraphEngine.cpp SoundEngine.cpp main.cpp test.cpp -o GameX -lGL -lGLU -ldl -lfreetype -lXrandr -lX11 -lpthread -lrt -lXxf86vm -lXi -lfreeimage -lglfw

@@ -1,0 +1,15 @@
+CXX=g++
+FLAGS=-Wall -o2 -g
+OBJS=defines.o GameX.o main.o test.o
+TARGETS=GameX
+
+LIBS=$(shell pkg-config --libs gl) -L/usr/lib  -lGL -lGLU -lglfw -lfreetype
+INCLUDES=$(shell pkg-config --cflags gl) -I/usr/include -I. -I/usr/include/freetype2
+
+all:$(TARGETS)
+$(TARGETS):$(OBJS)
+	$(CXX) $(FLAGS) $(OBJS) -o $@ $(LIBS)
+$(OBJS):%.o:%.cpp
+	$(CXX) $(FLAGS) -c  $< -o $@ $(INCLUDES)
+clean:
+	rm  -rf $(OBJS) $(TARGETS)
